@@ -4,7 +4,7 @@ const { JWT_SECRET } = require('../configuration');
 
 signToken = user => {
   return JWT.sign({
-    iss: 'CodeWorkr',
+    iss: 'bgbhavesh',
     sub: user.id,
     iat: new Date().getTime(), // current time
     exp: new Date().setDate(new Date().getDate() + 1) // current time + 1 day ahead
@@ -17,15 +17,15 @@ module.exports = {
 
     // Check if there is a user with the same email
     const foundUser = await User.findOne({ "local.email": email });
-    if (foundUser) { 
-      return res.status(403).json({ error: 'Email is already in use'});
+    if (foundUser) {
+      return res.status(403).json({ error: 'Email is already in use' });
     }
 
     // Create a new user
-    const newUser = new User({ 
+    const newUser = new User({
       method: 'local',
       local: {
-        email: email, 
+        email: email,
         password: password
       }
     });

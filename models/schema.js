@@ -1,6 +1,5 @@
-import { Schema } from "mongoose";
-
-const Schema = mongoose.Schema;
+var Mongoose = require("mongoose");
+const Schema = Mongoose.Schema;
 
 // // Create a schema
 var schemaData = {
@@ -41,7 +40,7 @@ var schemaData = {
         }
     },
     getUserSchema: function (schema) {
-        if (schema.constructor === Object) {
+        if (schema && schema.constructor === Object) {
             if (schema.method && schema.local) {
                 return new Schema(schema);
             }
@@ -52,4 +51,4 @@ var schemaData = {
 
 }
 
-module.exports = { schemaData };
+module.exports = schemaData;
