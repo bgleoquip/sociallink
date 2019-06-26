@@ -1,6 +1,6 @@
 {
   "name": "sociallink",
-  "version": "1.0.0",
+  "version": "1.0.0.1",
   "description": "server side code for fb and google \u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5Dlogin, fb and google",
   "main": "app.js",
   "scripts": {

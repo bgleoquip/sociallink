@@ -23,9 +23,9 @@ const connectMongoose = () => {
     mongoose.Promise = global.Promise;
 
     if (process.env.NODE_ENV === 'test') {
-        mongoose.connect(state.dburl, { useMongoClient: true });
+        mongoose.connect(state.dburl, { useNewUrlParser: true });
     } else {
-        mongoose.connect(state.dburl, { useMongoClient: true });
+        mongoose.connect(state.dburl, { useNewUrlParser: true });
     }
 }
 
