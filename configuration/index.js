@@ -1,29 +1,6 @@
-if (process.env.NODE_ENV === 'test') {
-  module.exports = {
-    JWT_SECRET: 'bgLeoQuip',
-    oauth: {
-      google: {
-        clientID: 'number',
-        clientSecret: 'string',
-      },
-      facebook: {
-        clientID: 'number',
-        clientSecret: 'string',
-      },
-    },
-  };
-} else {
-  module.exports = {
-    JWT_SECRET: 'bgLeoQuip',
-    oauth: {
-      google: {
-        clientID: 'number',
-        clientSecret: 'string',
-      },
-      facebook: {
-        clientID: 'number',
-        clientSecret: 'string',
-      },
-    },
-  };
+const { dbName, dbUrl } = require("./mongoDB");
+const { PORT, HOST } = require("./server");
+const { JWT_SECRET, oauth } = require("./jwt");
+module.exports = {
+    dbUrl, dbName, JWT_SECRET, oauth, PORT, HOST
 }
